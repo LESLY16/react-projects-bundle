@@ -1,0 +1,205 @@
+.checkout-page {
+  min-height: 100vh;
+  background: #f9fafb;
+  padding: 2rem 0;
+}
+
+.checkout-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.checkout-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.checkout-content {
+  margin-top: 2rem;
+}
+
+.review-section {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 2rem;
+}
+
+.review-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+.review-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.review-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.review-card p {
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.edit-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.edit-btn:hover {
+  background: #2563eb;
+}
+
+.review-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.review-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.review-item-details {
+  flex: 1;
+}
+
+.review-item-name {
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.review-item-qty {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.review-item-price {
+  font-weight: 600;
+  color: #111827;
+}
+
+.review-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 2px solid #e5e7eb;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.total-amount {
+  font-size: 1.5rem;
+  color: #3b82f6;
+}
+
+.review-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .checkout-title {
+    font-size: 1.5rem;
+  }
+
+  .review-section {
+    padding: 1.5rem;
+  }
+
+  .review-card {
+    padding: 1rem;
+  }
+
+  .edit-btn {
+    position: static;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .review-item {
+    flex-wrap: wrap;
+  }
+
+  .review-item-price {
+    width: 100%;
+    text-align: right;
+    margin-top: 0.5rem;
+  }
+
+  .review-actions {
+    flex-direction: column-reverse;
+  }
+}
