@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { FaHeart, FaRegHeart, FaShoppingCart, FaEye } from 'react-icons/fa';
 import { addToCart } from '../../store/slices/cartSlice';
 import { toggleWishlist } from '../../store/slices/wishlistSlice';
@@ -10,6 +11,7 @@ import './ProductCard.css';
 
 const ProductCard = ({ product, onQuickView }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const wishlistItems = useSelector(state => state.wishlist.items);
   const isInWishlist = wishlistItems.some(item => item.id === product.id);
 
@@ -31,6 +33,10 @@ const ProductCard = ({ product, onQuickView }) => {
     }
   };
 
+  const handleCardClick = () => {
+    navigate(`/product/${product.id}`);
+  };
+
   const truncateName = (name, maxLength = 50) => {
     return name.length > maxLength ? name.substring(0, maxLength) + '...' : name;
   };
@@ -42,7 +48,11 @@ const ProductCard = ({ product, onQuickView }) => {
     : 0;
 
   return (
-    <div className={`product-card ${isOutOfStock ? 'out-of-stock' : ''}`}>
+    <div 
+      className={`product-card ${isOutOfStock ? 'out-of-stock' : ''}`}
+      onClick={handleCardClick}
+      style={{ cursor: 'pointer' }}
+    >
       {/* Badges */}
       <div className="product-card-badges">
         {isOutOfStock && (

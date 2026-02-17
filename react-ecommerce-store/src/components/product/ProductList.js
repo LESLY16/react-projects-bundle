@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { FaTh, FaList } from 'react-icons/fa';
 import { setViewMode } from '../../store/slices/productSlice';

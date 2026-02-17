@@ -80,7 +80,7 @@ const ProductGallery = ({ images = [], productName = 'Product' }) => {
         >
           <img 
             src={currentImage} 
-            alt={`${productName} - Image ${selectedImageIndex + 1}`}
+            alt={`${productName} ${selectedImageIndex + 1}`}
             style={isZoomed ? {
               transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`,
             } : {}}
