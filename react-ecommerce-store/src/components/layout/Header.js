@@ -99,7 +99,7 @@ const Header = () => {
                   <button
                     className="header-icon"
                     onClick={() => setShowUserMenu(!showUserMenu)}
-                    title={isAuthenticated ? currentUser?.name : 'Login'}
+                    title={isAuthenticated ? `${currentUser?.firstName} ${currentUser?.lastName}` : 'Login'}
                   >
                     <FiUser />
                   </button>
@@ -109,7 +109,7 @@ const Header = () => {
                       {isAuthenticated ? (
                         <>
                           <div className="user-info">
-                            <p className="user-name">{currentUser?.name}</p>
+                            <p className="user-name">{currentUser?.firstName} {currentUser?.lastName}</p>
                             <p className="user-email">{currentUser?.email}</p>
                           </div>
                           <Link 
