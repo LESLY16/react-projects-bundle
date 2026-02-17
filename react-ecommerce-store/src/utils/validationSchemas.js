@@ -63,7 +63,10 @@ export const shippingAddressSchema = Yup.object().shape({
 // Payment validation schema
 export const paymentSchema = Yup.object().shape({
   cardNumber: Yup.string()
-    .matches(/^[0-9]{16}$/, 'Card number must be 16 digits')
+    .test('card-number', 'Card number must be 16 digits', (value) => {
+      const cleaned = value?.replace(/\s/g, '');
+      return /^[0-9]{16}$/.test(cleaned);
+    })
     .required('Card number is required'),
   cardName: Yup.string()
     .min(3, 'Cardholder name must be at least 3 characters')
